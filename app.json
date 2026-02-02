@@ -7,6 +7,11 @@
     "android": {
       "package": "com.ainanasolo.interviewassistant",
       "permissions": ["RECORD_AUDIO"]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8e7d1ae2-2d08-459c-bce1-4343d1788eaa"
+      }
     }
   }
 }
