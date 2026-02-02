@@ -1,0 +1,35 @@
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
+
+export default function App() {
+  const [response, setResponse] = useState("Ready to assist you in your interview...");
+
+  const getAIAnswer = async () => {
+    setResponse("Analyzing the question...");
+    // This simulates the AI response in a natural, professional English tone
+    setTimeout(() => {
+      setResponse("Well, actually, in my previous experience as a Full Stack Engineer, I've successfully implemented similar architectures using React and Node.js to improve system scalability.");
+    }, 2000);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>AI Interview Assistant</Text>
+      <ScrollView style={styles.responseArea}>
+        <Text style={styles.responseText}>{response}</Text>
+      </ScrollView>
+      <TouchableOpacity style={styles.button} onPress={getAIAnswer}>
+        <Text style={styles.buttonText}>GENERATE ANSWER</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: '#0A0A0A', alignItems: 'center', padding: 25 },
+  title: { fontSize: 22, color: '#FFFFFF', marginTop: 50, fontWeight: 'bold', letterSpacing: 1 },
+  responseArea: { flex: 1, width: '100%', backgroundColor: '#161616', borderRadius: 15, padding: 20, marginVertical: 30 },
+  responseText: { color: '#00FF41', fontSize: 18, lineHeight: 26, fontFamily: 'monospace' },
+  button: { backgroundColor: '#F0B90B', padding: 20, borderRadius: 10, width: '100%', alignItems: 'center', elevation: 5 },
+  buttonText: { color: '#000', fontWeight: '900', fontSize: 16 },
+});
