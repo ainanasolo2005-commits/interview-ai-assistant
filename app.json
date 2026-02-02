@@ -1,9 +1,10 @@
 {
   "expo": {
     "name": "Interview AI Assistant",
-    "slug": "interview-ai-assistant",
+    "slug": "interviewassistant",
     "owner": "ainanasolos-organization",
     "version": "1.0.0",
+    "orientation": "portrait",
     "android": {
       "package": "com.ainanasolo.interviewassistant",
       "permissions": ["RECORD_AUDIO"]
